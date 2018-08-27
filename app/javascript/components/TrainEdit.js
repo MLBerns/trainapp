@@ -77,6 +77,7 @@ class TrainNew extends React.Component {
       >
         <option value="" disabled hidden>Select Route</option>
         <option value="Blue Line">Blue Line</option>
+        <option value="Brown Line">Brown Line</option>
         <option value="Green Line">Green Line</option>
         <option value="Orange Line">Orange Line</option>
         <option value="Pink Line">Pink Line</option>
@@ -95,9 +96,17 @@ class TrainNew extends React.Component {
         name='route'
       >
         <option value="" disabled hidden>Select Route</option>
-        <option value="UPN">UPN</option>
-        <option value="DS9">DS9</option>
-        <option value="B5">B5</option>
+        <option value="BNSF">BNSF</option>
+        <option value="HC">HC</option>
+        <option value="MD-N">MD-N</option>
+        <option value="MD-W">MD-W</option>
+        <option value="ME">ME</option>
+        <option value="NCS">NCS</option>
+        <option value="RI">RI</option>
+        <option value="SWS">SWS</option>
+        <option value="UP-N">UP-N</option>
+        <option value="UP-NW">UP-NW</option>
+        <option value="UP-W">UP-W</option>
       </select>
     )
   }
@@ -111,9 +120,19 @@ class TrainNew extends React.Component {
         name='route'
       >
         <option value="" disabled hidden>Select Route</option>
+        <option value="California Zephyr">California Zephyr</option>
+        <option value="Capitol Limited">Capitol Limited</option>
+        <option value="Cardinal">Cardinal</option>
+        <option value="City of New Orleans">City of New Orleans</option>
+        <option value="Empire Builder">Empire Builder</option>
         <option value="Hiawatha">Hiawatha</option>
-        <option value="Something1">Something1</option>
-        <option value="Something2">Something2</option>
+        <option value="Hoosier State">Hoosier State</option>
+        <option value="Illinois Service">Illinois Service</option>
+        <option value="Lake Shore Limited">Lake Shore Limited</option>
+        <option value="Michigan Services">Michigan Services</option>
+        <option value="Missouri River Runner">Missouri River Runner</option>
+        <option value="Southwest Chief">Southwest Chief</option>
+        <option value="Texas Eagle">Texas Eagle</option>
       </select>
     )
   }
