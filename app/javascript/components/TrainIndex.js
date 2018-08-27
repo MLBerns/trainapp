@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import _ from "lodash"
 import Train from "./Train"
 import TrainEdit from "./TrainEdit"
+import bb from "billboard.js"
 
 class TrainIndex extends React.Component {
   constructor(props) {
@@ -12,6 +13,32 @@ class TrainIndex extends React.Component {
       adding: false,
       sort_by: 'run_number'
     }
+  }
+
+  componentDidMount() {
+    this.renderPieGraph()
+  }
+
+  componentDidUpdate () {
+    this.renderPieGraph()
+  }
+
+  renderPieGraph () {
+    const { trains } = this.props
+    const amtrak = _.filter(trains, function(train) {return train.train_line == "Amtrak"} ).length
+    const el = _.filter(trains, function(train) {return train.train_line == "El"} ).length
+    const metra = _.filter(trains, function(train) {return train.train_line == "Metra"} ).length
+    const foo = bb.generate({
+      data: {
+        columns: [
+      ["Amtrak", amtrak],
+      ["El", el],
+      ["Metra", metra]
+        ],
+        type: "pie",
+      },
+      bindto: "#graph"
+    });
   }
 
   toggleAddState () {
@@ -115,6 +142,7 @@ class TrainIndex extends React.Component {
         <button className="add_button" onClick={this.toggleAddState.bind(this)}>
           {this.state.adding ? "Cancel Adding" : "Add Train Line"}
         </button>
+        <div id="graph"></div>
       </div>
     );
   }
