@@ -62,7 +62,7 @@ class TrainNew extends React.Component {
         <option value="" disabled hidden>Select Line</option>
         <option value="El">El</option>
         <option value="Metra">Metra</option>
-        <option value="Amtrak">Amtak</option>
+        <option value="Amtrak">Amtrak</option>
       </select>
     )
   }
