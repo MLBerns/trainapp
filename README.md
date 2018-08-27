@@ -4,8 +4,7 @@ Run the following
 
 ```
 bundle install
-yarn install
-rails webpacker:install:react
+rake assets:precompile
 rake db:migrate
 rake db:seed
 ```
